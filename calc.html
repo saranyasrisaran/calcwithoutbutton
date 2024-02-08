@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="citystatus.css">
+    <title>Document</title>
+</head>
+<body>
+   <div id="wrapper">
+    <h2>Calculator</h2>
+    <div>
+        <input type="text" id="num1" value="">
+    </div>
+    <div class="inputdiv">
+        <select id="input">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>
+    </div>
+    <div>
+        <input type="text" id="num2" value="">
+    </div>
+    
+    <div>
+
+        <button type="submit" onclick="calculate()">Calculate</button>
+    </div>
+    <div id="result"></div>
+   </div>
+   <script>
+    let result
+    function calculate() {
+         
+        var number1=Number(document.getElementById("num1").value)
+        // console.log(number1)
+        var number2=Number(document.getElementById("num2").value)
+        // console.log(number2)
+        var oprend=document.getElementById("input")
+        var opr=oprend.options[oprend.selectedIndex].value
+        // console.log(opr)
+        switch(opr){
+            case '+':
+                result=number1+number2
+
+                document.getElementById("result").innerHTML = result
+                break
+                case '-':
+                result=number1-number2
+                document.getElementById("result").innerHTML =result
+                break
+                case '*':
+                result=number1*number2
+                document.getElementById("result").innerHTML =result
+                break
+                case '/':
+                result=number1/number2
+                document.getElementById("result").innerHTML =result
+                break
+
+
+           
+            
+
+            
+        }
+
+        
+        
+    }
+        
+     
+        
+       
+         
+      
+       
+
+
+
+        
+    
+
+   </script>
+    
+</body>
+</html>
+
+
